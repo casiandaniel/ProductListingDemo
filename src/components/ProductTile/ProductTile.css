@@ -1,0 +1,105 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f4f4f4;
+    width: auto;
+    margin-bottom: 13px;
+    padding: 20px;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+.image {
+    width: 140px;
+    height: 120px;
+    border-radius: 10%;
+    margin-top: 30px;
+}
+
+.title {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 1.125rem;
+    text-align: center;
+}
+
+.priceContainer {
+    font-family: 'Copperplate', sans-serif, Arial;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+.label {
+    color: #165dba;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition-property: border-color, color;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-bottom: 10px;
+}
+
+.label:hover {
+    color: #114284;
+    border-color: #114284;
+}
+
+.description {
+    font-size: 0.75rem;
+}
+
+@media (min-width: 720px) {
+    .section {
+        padding-bottom: 50px;
+    }
+
+    .content {
+        height: 377px;
+        padding: 40px 40px 0;
+        margin-bottom: 0;
+        align-items: flex-start;
+    }
+
+    .section:hover {
+        cursor: pointer;
+    }
+
+    .section:hover .content {
+        background: #e8e8e8;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        text-align: left;
+        margin-bottom: 0;
+        min-height: 100px;
+    }
+
+    .image {
+        width: 286px;
+        height: 244px;
+        margin-top: 0;
+        align-self: flex-end;
+        transform: translateX(60%) translateY(15px);
+        transition-property: transform;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .section:hover .image {
+        transform: translateX(40%) translateY(5px);
+        transition-property: transform;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+}

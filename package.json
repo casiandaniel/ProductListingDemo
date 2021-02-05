@@ -1,0 +1,93 @@
+{
+    "name": "product-listing-page",
+    "version": "0.0.1",
+    "description": "Demo package for product listing page",
+    "main": "dist/cjs/index.js",
+    "module": "dist/es/index.js",
+    "files": [
+        "dist",
+        "src"
+    ],
+    "scripts": {
+        "watch": "rimraf dist && cross-env NODE_ENV=development rollup --config ./rollup.config.js --watch",
+        "test": "jest --passWithNoTests",
+        "test:watch": "jest --watchAll",
+        "lint": "eslint *.js src/**/*.js",
+        "format": "yarn run format:prettier --write",
+        "format:check": "yarn run format:prettier --check",
+        "format:prettier": "prettier --config prettier.config.js '*.@(js|json|yml)' 'src/**/*.@(js|css)'",
+        "build": "rimraf dist && cross-env NODE_ENV=production rollup --config ./rollup.config.js",
+        "storybook": "start-storybook -c ./.storybook",
+        "precommit": "lint-staged"
+    },
+    "author": {
+        "name": "Casian Daniel Suciu",
+        "email": "casiandaniel.suciu@gmail.com"
+    },
+    "license": "ISC",
+    "bin": {
+        "create-react-rollup-app": "./bin/rra.js"
+    },
+    "devDependencies": {
+        "@babel/core": "7.8.7",
+        "@babel/plugin-proposal-class-properties": "7.8.3",
+        "@babel/plugin-transform-runtime": "^7.12.15",
+        "@babel/preset-env": "7.8.7",
+        "@babel/preset-react": "7.8.3",
+        "@rollup/plugin-node-resolve": "^11.1.1",
+        "@storybook/addon-essentials": "6.0.28",
+        "@storybook/react": "6.0.28",
+        "@testing-library/dom": "^7.20.0",
+        "@testing-library/jest-dom": "^5.11.0",
+        "@testing-library/react": "^10.4.4",
+        "@testing-library/user-event": "^12.0.11",
+        "babel-jest": "25.1.0",
+        "babel-loader": "8.1.0",
+        "clsx": "^1.1.1",
+        "cross-env": "7.0.2",
+        "eslint": "6.8.0",
+        "eslint-plugin-jest": "23.8.2",
+        "eslint-plugin-react": "7.19.0",
+        "framer-motion": "^3.3.0",
+        "identity-obj-proxy": "3.0.0",
+        "informed": "3.12.0",
+        "jest": "25.1.0",
+        "postcss": "^8.2.4",
+        "postcss-cli": "^8.3.1",
+        "postcss-loader": "^5.0.0",
+        "prettier": "2.0.1",
+        "prop-types": "15.7.2",
+        "react": "16.13.1",
+        "react-dom": "16.13.1",
+        "react-router-dom": "~5.1.0",
+        "react-test-renderer": "16.13.1",
+        "redux": "~4.0.1",
+        "rimraf": "3.0.2",
+        "rollup": "2.2.0",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-postcss": "^4.0.0"
+    },
+    "dependencies": {
+        "@material-ui/core": "^4.11.3",
+        "@material-ui/icons": "^4.11.2",
+        "classnames": "^2.2.6",
+        "enzyme": "^3.6.0",
+        "enzyme-adapter-react-16": "^1.5.0",
+        "prop-types": "15.7.2"
+    },
+    "lint-staged": {
+        "*.{js,jsx}": [
+            "prettier --trailing-comma es5 --single-quote --write",
+            "eslint --fix --ext .jsx,.js",
+            "git add"
+        ]
+    },
+    "peerDependencies": {
+        "react": "16.13.1",
+        "style-inject": "0.3.0"
+    },
+    "engines": {
+        "node": "10.x",
+        "yarn": ">=1.12.0"
+    }
+}
