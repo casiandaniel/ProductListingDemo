@@ -1,6 +1,7 @@
 # demo/product-listing-page
 
-DEMO package that will render a product listing page using mockdata using Fake Store API.
+DEMO package that will render a product listing page with mockdata using Fake Store API.
+https://fakestoreapi.com/docs
 
 ## Get Started
 
